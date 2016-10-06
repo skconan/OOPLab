@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -26,7 +27,18 @@ public class GameScreen extends ScreenAdapter {
         batch.end();
     }
     private void update(float delta) {
-        x += 5;    
-    }
+        if(Gdx.input.isKeyPressed(Keys.LEFT)) {
+            x -= 10;
+        }
+        if(Gdx.input.isKeyPressed(Keys.RIGHT)) {
+            x += 10;
+        }
+        if(Gdx.input.isKeyPressed(Keys.DOWN)) {
+            y -= 10;
+        }
+        if(Gdx.input.isKeyPressed(Keys.UP)) {
+            y += 10;
+        }
+    }	
     
 }
