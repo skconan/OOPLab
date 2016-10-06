@@ -1,0 +1,23 @@
+package com.mygdx.game;
+
+import com.badlogic.gdx.ScreenAdapter;
+
+public class GameScreen extends ScreenAdapter {
+	 
+    private PacmanGame pacmanGame;
+ 
+    public class GameScreen extends ScreenAdapter {
+    	 
+        // ...
+        private Texture pacmanImg;
+     
+        public GameScreen(PacmanGame pacmanGame) {
+            // ...
+            pacmanImg = new Texture("pacman.png");
+        }
+    }
+    
+    public void render(float delta) {
+        System.out.println("Hello " + delta);
+    }
+}
