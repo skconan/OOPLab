@@ -13,7 +13,6 @@ public class GameScreen extends ScreenAdapter {
         // ...
         pacmanImg = new Texture("pacman.png");
     }
-    
     public void render(float delta) {
 		SpriteBatch batch = PacmanGame.batch;
         batch.begin();

@@ -9,9 +9,6 @@ public class PacmanGame extends Game {
         batch = new SpriteBatch();
         setScreen(new GameScreen(this));
     }
-    
-   
- 
     @Override
     public void dispose () {
         batch.dispose();
