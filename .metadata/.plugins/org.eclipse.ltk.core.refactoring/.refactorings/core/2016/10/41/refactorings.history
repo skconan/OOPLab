@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.mygdx.game.pacmanGame&apos; to &apos;PacmanGame&apos;&#x0A;- Original project: &apos;core&apos;&#x0A;- Original element: &apos;com.mygdx.game.pacmanGame&apos;&#x0A;- Renamed element: &apos;com.mygdx.game.PacmanGame&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;pacmanGame&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.mygdx.game{pacmanGame.java[pacmanGame" matchStrategy="1" name="PacmanGame" qualified="false" references="true" similarDeclarations="false" stamp="1475765663184" textual="false" version="1.0"/>
+</session>
