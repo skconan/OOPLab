@@ -10,29 +10,35 @@ public class GameScreen extends ScreenAdapter {
     private PacmanGame pacmanGame;
     
     public GameScreen(PacmanGame pacmanGame) {
+    	this.pacmanGame = pacmanGame;
         world = new World(pacmanGame);
     }
     public void render(float delta) {
         update(delta);
-        Gdx.gl.glClearColor(0, 0, 0, 1);
+    	Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        WorldRenderer worldRenderer = new WorldRenderer(this.pacmanGame,world);
+        WorldRenderer worldRenderer = new WorldRenderer(pacmanGame,world);
         worldRenderer.render(delta);
+        
     }
     private void update(float delta) {
+    	Pacman pacman = world.getPacman();
+   
         if(Gdx.input.isKeyPressed(Keys.LEFT)) {
-            world.getPacman().move(Pacman.DIRECTION_LEFT);
+        	pacman.setNextDirection(Pacman.DIRECTION_LEFT);
         }
         if(Gdx.input.isKeyPressed(Keys.RIGHT)) {
-        	world.getPacman().move(Pacman.DIRECTION_RIGHT);
+        	pacman.setNextDirection(Pacman.DIRECTION_RIGHT);
         }
         
         if(Gdx.input.isKeyPressed(Keys.DOWN)) {
-        	world.getPacman().move(Pacman.DIRECTION_DOWN);
+        	pacman.setNextDirection(Pacman.DIRECTION_DOWN);
         }
         if(Gdx.input.isKeyPressed(Keys.UP)) {
-        	world.getPacman().move(Pacman.DIRECTION_UP);
+        	pacman.setNextDirection(Pacman.DIRECTION_UP);
         }
+        world.update(delta);
+        
     }	
     
 }

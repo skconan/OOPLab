@@ -39,4 +39,5 @@ public class Maze {
     public boolean hasDotAt(int r, int c) {
         return MAP[r].charAt(c) == '.';
     }
+    
 }
