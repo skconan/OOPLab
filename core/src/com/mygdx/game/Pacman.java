@@ -11,7 +11,7 @@ public class Pacman {
     public static final int DIRECTION_DOWN = 3;
     public static final int DIRECTION_LEFT = 4;
     public static final int DIRECTION_STILL = 0;
-    public static final int SPEED = 10;
+    public static final int SPEED = 5;	
     private static final int [][] DIR_DIFF = new int [][] {
         {0,0},
         {0,-1},
