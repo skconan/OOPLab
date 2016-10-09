@@ -14,10 +14,10 @@ public class WorldRenderer {
         this.pacmanGame = pacmanGame;
         this.world = world;
         pacmanImg = new Texture("pacman.png");  
-        batch = pacmanGame.batch;
     }
 
 	public void render(float delta) {
+		batch = pacmanGame.batch;
 		batch.begin();
         Vector2 pos = world.getPacman().getPosition();
         batch.draw(pacmanImg, pos.x, pos.y);

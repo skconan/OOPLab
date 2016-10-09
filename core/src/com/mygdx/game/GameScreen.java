@@ -10,8 +10,7 @@ public class GameScreen extends ScreenAdapter {
     private PacmanGame pacmanGame;
     
     public GameScreen(PacmanGame pacmanGame) {
-    	this.pacmanGame = pacmanGame;
-        	world = new World(pacmanGame);
+        world = new World(pacmanGame);
     }
     public void render(float delta) {
         update(delta);
