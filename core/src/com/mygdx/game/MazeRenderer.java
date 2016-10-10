@@ -14,11 +14,6 @@ public class MazeRenderer {
         wallImage = new Texture("wall.png");
         dotImage = new Texture("dot.png");
     }
-//    |
-//    |
-//    |
-//    |_ _ _ _ _
-//   0,0
     public void render() {
         batch.begin();
         for(int r = 0; r < maze.getHeight(); r++) {
