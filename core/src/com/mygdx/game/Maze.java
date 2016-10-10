@@ -33,7 +33,10 @@ public class Maze {
         return width;
     }
     public boolean hasWallAt(int r, int c) {
-        return MAP[r].charAt(c) == '#';
+        if(r<0 || c<0){
+        	return false;
+        }
+    	return MAP[r].charAt(c) == '#';
     }
  
     public boolean hasDotAt(int r, int c) {
