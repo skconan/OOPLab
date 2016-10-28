@@ -25,6 +25,7 @@ public class Maze {
         width = MAP[0].length();
         initDotData();
     }
+    
     private void initDotData() {
         hasDots = new boolean[height][width];
         for(int r = 0; r < height; r++) {
@@ -33,6 +34,7 @@ public class Maze {
             }
         }
     }
+    
     public int getHeight() {
         return height;
     }
@@ -40,6 +42,7 @@ public class Maze {
     public int getWidth() {
         return width;
     }
+    
     public boolean hasWallAt(int r, int c) {
         if(r<0 || c<0){
         	return false;
@@ -50,6 +53,7 @@ public class Maze {
     public boolean hasDotAt(int r, int c) {
         return hasDots[r][c];
     }
+    
     public void removeDotAt(int r, int c) {
         hasDots[r][c] = false;
     }

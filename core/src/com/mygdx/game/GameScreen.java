@@ -13,6 +13,7 @@ public class GameScreen extends ScreenAdapter {
     	this.pacmanGame = pacmanGame;
         world = new World(pacmanGame);
     }
+    
     public void render(float delta) {
         update(delta);
     	Gdx.gl.glClearColor(0, 0, 0, 1);
@@ -21,11 +22,13 @@ public class GameScreen extends ScreenAdapter {
         worldRenderer.render(delta);
         
     }
+    
     private void update(float delta) {
     	updatePacmanDirection();
         world.update(delta);
         
     }	
+    
     private void updatePacmanDirection() {
     	Pacman pacman = world.getPacman();
     	   
